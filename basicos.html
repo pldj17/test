@@ -1,0 +1,54 @@
+</DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=10">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body>
+
+    <h1>Fundamentos JavaScript :')</h1>
+    <script>
+        //las variable *var* son variables globales
+        var hola = "Hola mundo";
+        //las variables *let* son variables de ambito de bloque
+        let hello = 'Hello world';
+        console.log(hola);
+        console.log(window); 
+        console.log(window.hola);
+        console.log(window.let);
+
+        //ambito bloque
+        //un bloque de codigo es el codigo separado por un juego de llaves
+        
+        //variables var - globales
+        console.log('***************var*************');
+        var musica = 'Rock';
+        console.log('Variable antes del bloque ', musica); //deberia imprimir ROCK
+        {
+            var musica = 'Pop';
+            console.log('Variable dentro del bloque ', musica); //deberia imprimir POP
+        }
+        console.log('Variable despues del bloque ', musica); //deberia imprimir ROCK, pero imprimira POP
+
+        //variables let - ambito de bloque
+        console.log('***************let*************');
+        let musica2 = 'Rock';
+        console.log('Variable antes del bloque ', musica2); //Imprime ROCK
+        {
+            let musica2 = 'Pop';
+            console.log('Variable dentro del bloque ', musica2); //Imprime POP
+        }  
+        console.log('Variable despues del bloque ', musica2); //Imprime ROCK
+
+
+        //const: permite crear variables. Se utiliza cuando tengamos variables que no vayan a cambiar durante el flujo del codigo (es un valor constante)
+        //Las constantes nunca deben estar vacias, siempre deben tener un valor. Tampoco se puede volver a asignar otro valor,siempre debe tener el mismo valor
+        const PI = 3.1416;
+        console.log(PI);
+
+    </script>
+
+</body>
+</html>
