@@ -59,13 +59,23 @@
         console.log(nombre.length,
                     apellido.length,
                     saludo.length,
-                    
                     nombre.toUpperCase(), //poner toda la cadena en mayusculas
                     apellido.toLowerCase(), //poner toda la cadena en minusculas
                     lorem.includes("sit"), //devuelve true si esa palabra se encuentra dentro de la variable lorem
                     lorem.includes("priscila"), //devuelve false si esa palabra no se encuentra dentro de la variable
                     lorem.split(",") //convierte la cadena de texto en un array, utiliza como separador el caracter que le indiquemos
                     );
+
+        //caracteristicas de las cadenas de texto (concatenacion y interpolacion)
+        // concatenacion
+        let nombre1 = "Priscila";
+        let apellido1 = "Duarte";
+        let saludo1 = "Hola, mi nombre es " + nombre1 + " " + apellido1;
+        console.log(saludo1);
+
+        //interpolacion de variables, permite insertar dentro de una cadena de texto el valor dinamicamente de una variable, pero para ello se debe utilizar TemplateString
+        let saludo2 = `Hola, mi nombre es ${nombre1} ${apellido}.`; //permite concatenar variables sin tener que poner el signo de suma e ir agregando manualmente todas las variables de a uno.
+        console.log(saludo2);
 
     </script>
 
