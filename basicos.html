@@ -52,8 +52,7 @@
         let nombre = 'Priscila';
         let apellido = 'Duarte';
         let saludo = new String("Hola mundo");
-
-        let lorem
+        let lorem = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna."
 
         console.log(nombre, apellido, saludo);
         //usar el metodo length para cadenas de texto
@@ -61,8 +60,12 @@
                     apellido.length,
                     saludo.length,
                     
-                    nombre.toUpperCase(),
-                    apellido.toLowerCase());
+                    nombre.toUpperCase(), //poner toda la cadena en mayusculas
+                    apellido.toLowerCase(), //poner toda la cadena en minusculas
+                    lorem.includes("sit"), //devuelve true si esa palabra se encuentra dentro de la variable lorem
+                    lorem.includes("priscila"), //devuelve false si esa palabra no se encuentra dentro de la variable
+                    lorem.split(",") //convierte la cadena de texto en un array, utiliza como separador el caracter que le indiquemos
+                    );
 
     </script>
 
