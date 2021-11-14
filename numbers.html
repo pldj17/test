@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=10">
+        <title>Fundamentos JavaScript</title>
+    </head>
+    <body>
+        <h1>Tipo de datos: numericos</h1>
+        <script>
+            //definicion de numbers
+            let a = 2;
+            let b = new Number(3); //definir con el constructo
+            let c = 7.19;
+            let d = "5.6";
+
+            console.log(a,b);
+            console.log(c.toFixed(1));//con el metodo toFixed indicamos cuantos numeros decimales queremos mostrar
+            console.log(parseInt(c));//imprime solo la parte entera del numero, tambien convierte a number un dato de tipo string
+            //una forma de saber el tipo de dato de una variable es utilizando el metodo typeof
+            console.log(typeof c, typeof d); 
+            console.log(c + d); //aqui solo nos va a concatenar las variables, dado que una variable es de tipo numerica y la otra string, primero habria que convertir a numerica tambien la otra variable para poder hacer la suma correctamente
+            console.log(c + parseFloat(d));
+            console.log(parseFloat(c));//imprime la parte flotante del numero
+        </script>
+    </body>
+</html>
