@@ -22,6 +22,26 @@
             console.log(c + d); //aqui solo nos va a concatenar las variables, dado que una variable es de tipo numerica y la otra string, primero habria que convertir a numerica tambien la otra variable para poder hacer la suma correctamente
             console.log(c + parseFloat(d));
             console.log(parseFloat(c));//imprime la parte flotante del numero
+
+            //tipo de dato: booleans
+            let verdadero = true;
+            let falso = false;
+
+            console.log(verdadero, falso);
+            console.log(typeof verdadero, typeof falso);
+
+            //undefine: indica que no se ha inicializado una variable y que el valor esta ausente
+            let indefinida;
+            console.log(indefinida);
+
+            //null: es un valor especial que indica la ausencia del valor de una variable
+            let nulo = null;
+            console.log(nulo);
+
+            //NaN - Not a Numbe: es el resultado que se obtiene cuando se quiere hacer una operacion aritmetica entre un dato de tipo numerico y otro de tipo no numerico
+            let noEsUnNumero = 'Hola' * 1;
+            console.log(noEsUnNumero);
+
         </script>
     </body>
 </html>
