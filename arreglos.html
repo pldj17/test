@@ -1,0 +1,55 @@
+</DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=10">
+        <title>Fundamentos JavaScript</title>
+    </head>
+    <body>
+
+        <h1>Arreglos en JavaScript :')</h1>
+        <p>Valores compuestos: se accede a la referencia del valor</p>
+        <ul>
+            <li>Object = {}</li>
+            <li>array = []</li>
+            <li>function()</li>
+            <li>Class{}</li>
+        </ul> 
+        <script>
+
+            //formas de declarar arreglos: se pueden declarar como 'const' o tambien como 'lent'
+            const mascotas = ["Budy", "Micha", "Milo", "Fito", ["Blacky", "Dogui"]];
+            console.log(mascotas);
+            console.log(`El tamaño del arreglo es de ${mascotas.length}`);
+            console.log(`Mi mascota favorita es ${mascotas[0]}`);
+            console.log(mascotas[4][1]);
+
+            const a = Array.of("A", "B", "C", 1, 2, 3);
+            console.log(a);
+
+            const b = Array(10).fill("Hola mundo");
+            console.log(b);
+
+            const c = new Array(1,2,3,4); //forma antigua de declarar
+            console.log(c);
+
+            //Algunos metodos Array
+            const colores = ["Rojo", "Verde", "Azul"];
+            console.log(colores);
+
+            //Agregar un nuevo elemento al arreglo
+            colores.push("Negro"); // push: agrega un nuevo elemento al arreglo
+            console.log(colores);
+
+            //Eliminar ultimo elemento
+            colores.pop(); //pop: elimina el ultimo elemento del arreglo
+            console.log(colores);
+
+            colores.forEach(function (el, i) { //el: indica el valor de elemento del arreglo. I: indicar el indice del elemento
+                console.log(`<li id="${i}">${el}</li>`);
+            });
+            
+        </script>
+    </body>
+</html>
+    
