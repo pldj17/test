@@ -1,0 +1,69 @@
+</DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=10">
+        <title>Fundamentos JavaScript</title>
+    </head>
+    <body>
+
+        <h1>Objetos en JavaScript :')</h1>
+        <p>Valores compuestos: se accede a la referencia del valor</p>
+        <ul>
+            <li>Object = {}</li>
+            <li>array = []</li>
+            <li>function()</li>
+            <li>Class{}</li>
+        </ul> 
+        <script>
+            //Objetos: un objeto es una coleccion de llaves valores
+            
+            const a = {};
+            console.log(a);
+
+            const b = new Object();
+            console.log(b);
+
+            const priscila = {
+                nombre : "Priscila",
+                apellido : "Duarte",
+                edad : 24,
+                mascotas : ["Bydy", "Micha", "Milo", "Fito"],
+                soltera : true,
+                contacto: {
+                    email : "jimenezliz351@gmail.com",
+                    celular : 0994571190,
+                    twitter : "@pldj17"
+                },
+                saludar : function(){
+                    console.log(`Hola :)`);
+                },
+                //THIS: es el contexto en el que nos encontramos, This hace referencia al mismo objeto, es decir, al objeto Priscila
+                decirMiNombre : function(){
+                    console.log(`Hola, me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes encontrar en twitter como ${this.contacto.twitter}`);
+                }
+            }
+
+            console.log(priscila); 
+
+            //Atributos: los atributos son variables que tiene dentro un objeto
+            //Metodos: son las funciones que contiene un objeto
+
+            //podemos acceder a los atributos de un objeto de la siguiente manera:
+            console.log(priscila.nombre);
+            console.log(priscila["nombre"]);
+            console.log(priscila.edad);
+            console.log(priscila.mascotas[0]);//imprimir solo una mascota
+            console.log(priscila.contacto.twitter);//imprimir un solo atributo del objeto contacto
+            priscila.saludar(); //como al declarar la funcion ya agregamos el console.log ahora solamente debemos llamar al objeto con la funcion, y esta ya nos va a mostrar el saludo
+            priscila.decirMiNombre();
+
+            //algunos metodos de Object
+            console.log(Object.keys(priscila));
+            console.log(Object.values(priscila));
+            console.log(priscila.hasOwnProperty("nombre")); //verificar si el objeto priscila tiene o no una propiedad, si tiene devuelve true, sino false
+            console.log(priscila.hasOwnProperty("nacimiento"));
+
+        </script>
+    </body>
+</html>
