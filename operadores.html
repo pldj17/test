@@ -1,0 +1,99 @@
+</DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=10">
+        <title>Fundamentos JavaScript</title>
+    </head>
+    <body>
+
+        <h1>Tipos de operadores en JavaScript :')</h1>
+        <p>Operadores Aritmeticos</p> 
+        <ul>
+            <li>Suma + </li>
+            <li>Resta - </li>
+            <li>Division /: devuelve el cociente de una division </li> 
+            <li>Multiplicacion * </li>
+            <li>Modulo %: devuelve el resto de un division</li>
+        </ul> 
+        <p>Operadores relacionales</p>
+        <ul>
+            <li>Mayor que > </li>
+            <li>Menor que < </li>
+            <li>Igual que == </li>
+            <li>Mayor o igual que >= </li>
+            <li>Menor o igual que <= </li>
+            <li>===</li>
+            <li>Diferente que !=</li>
+            <li>!==</li>
+        </ul>
+        <script>
+            
+            let modulo = 5%2;
+            console.log(modulo);
+            
+            /*
+            =: 1 igual es asignacion de variable
+            ==: 2 iguales es comparacion de valores
+            ===: 3 iguales es comparacion de tipo de dato y de valor
+            */
+
+            console.log(7 == 7);
+            console.log("7" == 7);
+            console.log(0 == false);
+
+            console.log("--------------");
+
+            console.log(7 === 7);
+            console.log("7" === 7);
+            console.log(0 === false);
+            
+
+            console.log("*****Incremento - decremento *****");
+            /* Incremento - Decremento */
+            
+            let i = 1;
+
+            //i = i+2;
+
+            i += 3; 
+            console.log(i);
+            i -= 3;
+            console.log(i);
+            i /=3;
+            console.log(i);
+            i *= 3;
+            console.log(i);
+
+            //operador unario: es recomendable usar primero la variable y luego el operador (i++)
+            console.log('***operador unario***')
+            let a = 1;
+
+            a++;
+            console.log(a);
+            a--;
+            console.log(a);
+            ++a;
+            console.log(a);
+            --a;
+            console.log(a);
+
+            //Operadores logicos
+            console.log('***Operadores logicos***');
+            /*
+            Not != (Niega: Es decir, lo que es verdadero lo vuelve falso y viceversa)
+            Or || (Cuando tengo 2 o mas condiciones, con que una se cumple, es decir, sea verdadera, el Or devolvera true o se ejecutara)
+            And && (Cuando tengo 2 o mas condiciones, todas tienen que cumplirse, es decir, ser verdaderas para que and devuelva true o se ejecute)
+            */
+            
+            //Not
+            console.log(!true);
+            console.log(!false);
+            //or
+            console.log(9 === 9 || "9"===9);
+            //and
+            console.log(9 === 9 && "9"===9);
+
+        </script>
+    </body>
+</html>
