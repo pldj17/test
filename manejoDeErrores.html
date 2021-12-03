@@ -1,0 +1,37 @@
+</DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=10">
+        <title>Fundamentos JavaScript</title>
+    </head>
+    <body>
+
+        <h1>Manejo de errores en JavaScript :')</h1>
+        <script>
+
+            try {
+                console.log("En el try se agrega el codigo a evaluar");
+                noExiste;//error de ej, variable no declarada. Aca detiene la ejecucion y ya ejecuta el catch
+                console.log("Segundo mensaje en el try");
+            } catch (error) {//se ejecuta solo si hay un error, evita que aparezca el error rojo en la consola, y en su lugar se imprime un mensaje
+                console.log("catch captura cualquier error surgido o lanzado en el try");
+                console.log(error);//mostrar cual es el error
+            }finally{//se ejecuta siempre, haya o no un error
+                console.log("En bloque finally se ejecutara siempre al final de un bloque try-catch");
+            }
+
+            //personalizar mensajes de error
+            try{
+                let numero = "y";
+                if(isNaN(numero)){//funcion para evaluar si es de tipo numerico o no, si no es un nro regresa true, sino false
+                    throw new Error("El caracter introducido no es un numero");
+                }
+                console.log(numero * numero);
+            }catch(error){
+                console.log(`Se produjo el siguiente error: ${error}`);
+            }
+
+        </script>
+    </body>
+</html>
