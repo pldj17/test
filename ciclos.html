@@ -1,0 +1,75 @@
+</DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=10">
+        <title>Fundamentos JavaScript</title>
+    </head>
+    <body>
+
+        <h1>Ciclos (loops) en JavaScript :')</h1>
+        <script>
+            console.log("***CICLO WHILE***");
+            //while: con while siempre primero se compara antes de ejecutarse las lineas que estan dentro del ciclo, es decir, si no se cumple la condicion no se ejecuta nada
+
+            let contador = 0;
+
+            while(contador < 10){
+                console.log("while " + contador);
+                contador ++;
+            }
+
+            console.log("***CICLO DO WHILE***");
+
+            //do while: con do while se ejecuta al menos una vez todo el codigo y apartir de la segunda en adelante si es que la condicion se cumple, es decir, no es necesario que en la primera se cumpla la condicion
+            do{
+                console.log("do while " + contador);
+                contador++;
+            }while(contador < 10);
+
+            console.log("***CICLO FOR***");
+
+            /*for:
+            for(inicializacion de variable; la condicion que se va evaluar; decremento o incremento++){
+                sentencias que ejecuta el ciclo for;
+                }*/
+
+            for (let i = 0; i < 10; i++) {
+                console.log("for " + i); 
+            }
+
+            let numeros = [10,20,30,40,50,60,70,80,90];
+            for (let i = 0; i < numeros.length; i++) {
+                console.log(numeros[i]);
+                
+            }
+
+            console.log("***CICLO FOR IN***");
+            //for in: permite recorer o iterar las propiedades de un objeto, seria como un for especial para un objeto
+
+            const pri = {
+                nombre: "Priscila",
+                apellido: "Duarte",
+                edad: 24
+            }
+
+            for (const propiedad in pri) {
+                console.log(`Key:${propiedad}, Value: ${pri[propiedad]}` );
+            }
+
+            console.log("***CICLO FOR OF***");
+            //for of: permite recorrer todos los elementos de cualquier objeto que sea iterable en js, como arrays, cadenas de textos, etc
+
+            for (const elemento of numeros) {
+                console.log(elemento);
+            }
+
+            let cadena = "Hola mundo";
+
+            for (const caracter of cadena) {
+                console.log(caracter);
+            }
+
+        </script>
+    </body>
+</html>
